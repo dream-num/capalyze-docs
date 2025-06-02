@@ -78,7 +78,7 @@ const config: DocsThemeConfig = {
         href={`/${locale}`}
         className="flex items-center text-current no-underline hover:opacity-75 ltr:mr-auto rtl:ml-auto"
       >
-        <Image src="/logo/logo.png" alt="logo" width={45} height={45} />
+        <Image src="./logo/logo.png" alt="logo" width={45} height={45} />
         <span className="hidden select-none font-extrabold ltr:ml-2 rtl:mr-2 md:inline">Capalyze</span>
       </Link>
     );
