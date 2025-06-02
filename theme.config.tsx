@@ -42,9 +42,9 @@ const THEME_SWITCH_TEXT = {
 };
 
 const config: DocsThemeConfig = {
-  // docsRepositoryBase: 'https://github.com/namnguyenthanhwork/nextra-personal-website-template/tree/master',
+  docsRepositoryBase: 'https://github.com/dream-num/capalyze-docs/',
   // project: {
-  //   link: 'https://github.com/namnguyenthanhwork/nextra-personal-website-template',
+  //   link: 'https://github.com/dream-num/capalyze-docs/',
   // },
   // i18n: [
   //   { name: 'Tiếng Việt', locale: 'vi' },
@@ -150,8 +150,7 @@ const config: DocsThemeConfig = {
     const { locale } = useRouter();
     const description = config.frontMatter.description || 'Website description';
     const image =
-      config.frontMatter.image ||
-      'https://res.cloudinary.com/thanhnam/image/upload/v1704087446/thanhnamnguyen.dev/lyoko-banner-web_nr3vg9.jpg';
+      config.frontMatter.image;
     const title = `${config.title} | Brand Name (${locale})`;
     return (
       <>
@@ -166,9 +165,9 @@ const config: DocsThemeConfig = {
         <meta name="msapplication-TileColor" content="#fff" />
         <meta httpEquiv="Content-Language" content="en" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@thanhnamnguyen.dev" />
+        <meta name="twitter:site" content="@Capalyze" />
         <meta property="og:image" content={image} />
-        <meta name="apple-mobile-web-app-title" content="thanhnamnguyen.dev" />
+        <meta name="apple-mobile-web-app-title" content="Capalyze" />
       </>
     );
   },
