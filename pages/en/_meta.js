@@ -1,7 +1,7 @@
 export default {
   index: {
     type: 'page',
-    title: 'Nextra',
+    title: 'Capalyze',
     display: 'hidden',
     theme: {
       layout: 'raw',
@@ -11,16 +11,16 @@ export default {
     type: 'page',
     title: 'Docs',
   },
-  blog: {
-    title: 'Blog',
-    type: 'page',
-    href: '/blog',
-  },
-  about: {
-    type: 'page',
-    title: 'About me',
-    theme: {
-      typesetting: 'article',
-    },
-  },
+  // blog: {
+  //   title: 'Blog',
+  //   type: 'page',
+  //   href: '/blog',
+  // },
+  // about: {
+  //   type: 'page',
+  //   title: 'About me',
+  //   theme: {
+  //     typesetting: 'article',
+  //   },
+  // },
 };

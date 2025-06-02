@@ -7,13 +7,13 @@ const withNextra = nextra({
 
 export default withNextra({
   i18n: {
-    locales: ['en', 'vi'],
-    defaultLocale: 'vi',
+    locales: ['en'],
+    defaultLocale: 'en',
   },
   redirects: () => [
     {
       source: '/',
-      destination: `/vi`,
+      destination: `/en`,
       permanent: true,
     },
   ],
