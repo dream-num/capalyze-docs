@@ -8,7 +8,7 @@ const withNextra = nextra({
 
 export default withNextra({
   output: 'export',
-  basePath: '/capalyze-docs', // If you deploy in a subpath, please set it to the warehouse name
+  basePath: process.env.NODE_ENV === 'production' ? '/capalyze-docs' : '', // Only use basePath in production
   images: {
     unoptimized: true // mandatory, otherwise won't export
   },

@@ -3,6 +3,10 @@ import Image from 'next/image';
 import { useRouter } from 'nextra/hooks';
 import { LocaleSwitch, useConfig, DocsThemeConfig, Link, ThemeSwitch } from 'nextra-theme-docs';
 
+const DEFAULT_DESCRIPTION = 'Capalyze is a leading data analytics agent built for individuals and businesses. It supports linking multiple data sources and crawling network data, describing analysis needs, and presenting intelligent insights, helping e-commerce operations, real estate sales, self-media operations, and local life merchants extract valuable information from massive data and empower business decisions.'
+
+const DEFAULT_KEYWORDS = 'Capalyze, Data Analysis, Tables, DeepSeek, ChatGPT, AI Agent, Data Crawling, Text Analysis, Sentiment Analysis, Keyword Extraction, OLAP Analysis, Descriptive Statistical Analysis';
+
 const BANNER_TEXT = {
   vi: '🎉 Nextra Personal Website Template v1.1.0 được phát hành',
   en: '🎉 Capalyze supports web scraping',
@@ -146,17 +150,19 @@ const config: DocsThemeConfig = {
     ),
   },
   head: function useHead() {
-    const config = useConfig<{ description?: string; image?: string }>();
+    const config = useConfig<{ description?: string; image?: string, keywords?: string }>();
     const { locale } = useRouter();
-    const description = config.frontMatter.description || 'Website description';
+    const description = config.frontMatter.description || DEFAULT_DESCRIPTION;
+    const keywords = config.frontMatter.keywords || DEFAULT_KEYWORDS;
     const image =
       config.frontMatter.image;
-    const title = `${config.title} | Brand Name (${locale})`;
+    const title = `${config.title}`;
     return (
       <>
         <title>{title}</title>
         <meta property="og:title" content={title} />
         <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
         <meta property="og:description" content={description} />
         {/* Favicons, meta */}
         <link rel="apple-touch-icon" sizes="180x180" href="/logo/favicon.ico" />
