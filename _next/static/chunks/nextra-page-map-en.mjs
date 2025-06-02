@@ -24,6 +24,6 @@ export const pageMap = [{
   name: "index",
   route: "/en",
   frontMatter: {
-    "title": "Nextra Personal Website Template"
+    "title": "Capalyze Docs"
   }
 }];
